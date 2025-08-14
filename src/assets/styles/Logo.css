@@ -1,0 +1,9 @@
+.logo {
+  font-size: 28px;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.logo .highlight {
+  color: #0ea5e9; /* xanh dương nổi bật */
+}

@@ -1,0 +1,30 @@
+ul {
+    list-style: none;
+}
+
+li {
+    width: 100%;
+    text-align: left;
+    padding: 10px 20px;
+    display: inline-block;
+    color: #333;
+    cursor: pointer;
+}
+
+li.active {
+    background-color: #6E34FB;
+    color: #fff;
+    border-radius: 10px;
+}
+
+.flex {
+    display: flex;
+} 
+
+.items-center {
+    align-items: center;
+}
+
+.gap-5 {
+    gap: 5px;
+}
