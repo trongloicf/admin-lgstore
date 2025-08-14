@@ -42,10 +42,27 @@
     font-size: 18px;
 }
 
+.con-theme {
+    margin-right: 20px;
+    border-radius: 5px;
+}
+
+.con-theme button {
+    display: flex;
+    align-items: center;
+    padding: 4px;
+    border: 1px solid #034266;
+    border-radius: 5px;
+    font-size: 13px;
+    cursor: pointer;
+}
+
 .con-avatar-user {
+    position: relative;
     display: flex;
     align-items: center;
     gap: 10px;
+    cursor: pointer;
 }
 
 .img-user {
@@ -65,4 +82,38 @@
 .name-user {
     font-size: 14px;
     white-space: nowrap;
+}
+
+.dropdown-menu {
+    position: absolute;
+    min-width: 150px;
+    top: calc(100% + 5px);
+    right: -10px;
+    background: #fff;
+    overflow: hidden;
+    border-radius: 5px;
+    display: none;
+    z-index: 100;
+}
+
+.dropdown-menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.dropdown-menu li {
+  padding: 10px;
+  font-size: 14px;
+  color: #333;
+  transition: background 0.2s;
+}
+
+.dropdown-menu li:hover {
+  background: #f1f1f1;
+}
+
+.con-avatar-user:hover .dropdown-menu,
+.dropdown-menu:hover {
+  display: block;
 }
