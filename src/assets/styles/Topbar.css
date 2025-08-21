@@ -1,5 +1,6 @@
 .title {
     width: 150px;
+    flex: 1;
 }
 
 .con-input-search {

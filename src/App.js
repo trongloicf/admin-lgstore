@@ -1,24 +1,24 @@
-import './App.css';
-import Sidebar from "./components/Sidebar";
-import Topbar from "./components/Topbar";
-import StatsCard from "./components/StatsCard";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import AdminLayout from "./layouts/AdminLayout";
+import Dashboard from "./pages/Dashboard";
+import UserManagement from "./pages/UserManagement";
+import GuestManagement from "./pages/GuestManagement";
+import OrderManagement from "./pages/OrderManagement";
 
 function App() {
   return (
-    <div style={{ display: "flex" }}>
-      <Sidebar />
-      <div style={{ flex: 1 }}>
-        <Topbar />
-        <div style={{ padding: "20px", background: "#e2e8f0", minHeight: "100vh" }}>
-          <h2 style={{ marginBottom: "20px" }}>Dashboard</h2>
-          <div style={{ display: "flex", gap: "20px" }}>
-            <StatsCard title="Doanh thu hôm nay" value="15.000.000₫" />
-            <StatsCard title="Đơn hàng mới" value="25" />
-            <StatsCard title="Khách hàng" value="1024" />
-          </div>
-        </div>
-      </div>
-    </div>
+    <Router>
+      <AdminLayout>
+        <Routes>
+          <Route path="/" element={<Dashboard />} />
+          <Route path="/user" element={<UserManagement />}/>
+          <Route path="/guest" element={<GuestManagement />}/>
+          <Route path="/order" element={<OrderManagement />}/>
+          {/* <Route path="/users" element={<Users />} /> */}
+          {/* <Route path="/orders" element={<Orders />} /> */}
+        </Routes>
+      </AdminLayout>
+    </Router>
   );
 }
 

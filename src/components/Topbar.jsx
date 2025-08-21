@@ -1,20 +1,20 @@
 import '../assets/styles/Topbar.css';
 import '../App.css';
-import { HiOutlineSearch, HiOutlineMoon } from "react-icons/hi";
+import { HiOutlineMoon } from "react-icons/hi";
 
 const Topbar = () => {
   return (
-    <div style={{ background: "#f1f5f9", padding: "10px 20px", borderBottom: "1px solid #ccc" , display: 'flex', alignItems: 'center', height: '50px'}}>
+    <div style={{ background: "#f1f5f9", padding: "10px 20px", borderBottom: "1px solid #ccc" , display: 'flex', alignItems: 'center', height: '50px', position: "fixed", top: "0", right: "0", left: "250px"}}>
       <h2 className="title">Dashboard</h2>
 
-      <div className="con-input-search">
+      {/* <div className="con-input-search">
         <div className='wrap-input'> 
           <input type="text" placeholder="Tìm kiếm..."/>
         </div>
         <button>
           <HiOutlineSearch className="icon-search"/>
         </button>
-      </div>
+      </div> */}
 
       <div className='con-theme'>
         <button>

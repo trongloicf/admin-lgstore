@@ -5,7 +5,7 @@ import { HiViewGridAdd, HiOutlineUser, HiOutlineUserGroup, HiClipboardCheck, HiO
 
 const Sidebar = () => {
   return (
-    <div style={{ width: "250px", background: "#fafafa", color: "white", padding: "10px", minHeight: "100vh" }}>
+    <div style={{ width: "250px", background: "#fafafa", color: "white", padding: "10px", minHeight: "100vh", position: "fixed", left: "0" }}>
       <Logo />
       <ul>
         <li className="flex items-center gap-5 active">
