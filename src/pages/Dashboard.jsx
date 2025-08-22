@@ -15,12 +15,12 @@ function Dashboard() {
         <h3 style={{ marginBottom: '5px' }}>Đơn hàng gần đây</h3>
         <table style={{ width: "100%", borderCollapse: "collapse" }}>
           <thead>
-            <tr style={{ background: "#f1f5f9", textAlign: "left" }}>
-              <th style={{ padding: "10px", borderBottom: "1px solid #e2e8f0" }}>ID</th>
-              <th style={{ padding: "10px", borderBottom: "1px solid #e2e8f0" }}>Khách hàng</th>
-              <th style={{ padding: "10px", borderBottom: "1px solid #e2e8f0" }}>Sản phẩm</th>
-              <th style={{ padding: "10px", borderBottom: "1px solid #e2e8f0" }}>Giá</th>
-              <th style={{ padding: "10px", borderBottom: "1px solid #e2e8f0" }}>Trạng thái</th>
+            <tr style={{ background: "#22C55E", textAlign: "left" }}>
+              <th style={{ padding: "10px", borderBottom: "1px solid #ddd", color: "#fff", fontSize: "13px", fontWeight: "400" }}>ID</th>
+              <th style={{ padding: "10px", borderBottom: "1px solid #ddd", color: "#fff", fontSize: "13px", fontWeight: "400" }}>Khách hàng</th>
+              <th style={{ padding: "10px", borderBottom: "1px solid #ddd", color: "#fff", fontSize: "13px", fontWeight: "400" }}>Sản phẩm</th>
+              <th style={{ padding: "10px", borderBottom: "1px solid #ddd", color: "#fff", fontSize: "13px", fontWeight: "400" }}>Giá</th>
+              <th style={{ padding: "10px", borderBottom: "1px solid #ddd", color: "#fff", fontSize: "13px", fontWeight: "400" }}>Trạng thái</th>
             </tr>
           </thead>
           <tbody>

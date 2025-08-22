@@ -14,13 +14,13 @@ function OrderManagement() {
             </div>
             <table style={{ width: "100%", borderCollapse: 'collapse' }}>
                 <thead>
-                    <tr style={{ background: "#f1f5f9", textAlign: "left" }}>
-                        <th style={{ padding: "10px", borderBottom: "1px solid #ddd" }}>ID</th>
-                        <th style={{ padding: "10px", borderBottom: "1px solid #ddd" }}>Người nhận</th>
-                        <th style={{ padding: "10px", borderBottom: "1px solid #ddd" }}>Số điện thoại</th>
-                        <th style={{ padding: "10px", borderBottom: "1px solid #ddd" }}>Tổng tiền đơn hàng</th>
-                        <th style={{ padding: "10px", borderBottom: "1px solid #ddd" }}>Tình trạng</th>
-                        <th style={{ padding: "10px", borderBottom: "1px solid #ddd" }}>Hành động</th>
+                    <tr style={{ background: "#22C55E", textAlign: "left" }}>
+                        <th style={{ padding: "10px", borderBottom: "1px solid #ddd", color: "#fff", fontSize: "13px", fontWeight: "400" }}>ID</th>
+                        <th style={{ padding: "10px", borderBottom: "1px solid #ddd", color: "#fff", fontSize: "13px", fontWeight: "400" }}>Người nhận</th>
+                        <th style={{ padding: "10px", borderBottom: "1px solid #ddd", color: "#fff", fontSize: "13px", fontWeight: "400" }}>Số điện thoại</th>
+                        <th style={{ padding: "10px", borderBottom: "1px solid #ddd", color: "#fff", fontSize: "13px", fontWeight: "400" }}>Tổng tiền đơn hàng</th>
+                        <th style={{ padding: "10px", borderBottom: "1px solid #ddd", color: "#fff", fontSize: "13px", fontWeight: "400" }}>Tình trạng</th>
+                        <th style={{ padding: "10px", borderBottom: "1px solid #ddd", color: "#fff", fontSize: "13px", fontWeight: "400" }}>Hành động</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -32,22 +32,24 @@ function OrderManagement() {
                         <td style={{ padding: "10px" }}>
                             <span style={{ color: "green", background: "#eee", padding: "5px", borderRadius: "2px" }}>Chờ xử lý</span>
                         </td>
-                        <td style={{ padding: "10px", display: "flex", gap: '10px' }}>
-                            <div style={{ padding: "10px", background: "green", borderRadius: "50%", display: "flex", alignItems: "center" }}>
-                                <HiPencil
-                                    style={{ cursor: "pointer", color: "#fff"}}
-                                    title="Sửa"
-                                    size={17}
-                                    onClick={() => alert("Sửa user 1")}
-                                />
-                            </div>
-                            <div style={{ padding: "10px", background: "blue", borderRadius: "50%", display: "flex", alignItems: "center" }}>
-                                <HiEye
-                                    style={{ cursor: "pointer", color: "#fff" }}
-                                    title="Chi tiết"
-                                    size={17}
-                                    onClick={() => alert("Xem chi tiết user 1")}
-                                />
+                        <td style={{ padding: "10px" }}>
+                            <div className="btn-actions">
+                                <div style={{ padding: "10px", background: "green", borderRadius: "50%", display: "flex", alignItems: "center" }}>
+                                    <HiPencil
+                                        style={{ cursor: "pointer", color: "#fff" }}
+                                        title="Sửa"
+                                        size={17}
+                                        onClick={() => alert("Sửa user 1")}
+                                    />
+                                </div>
+                                <div style={{ padding: "10px", background: "blue", borderRadius: "50%", display: "flex", alignItems: "center" }}>
+                                    <HiEye
+                                        style={{ cursor: "pointer", color: "#fff" }}
+                                        title="Chi tiết"
+                                        size={17}
+                                        onClick={() => alert("Xem chi tiết user 1")}
+                                    />
+                                </div>
                             </div>
                         </td>
                     </tr>

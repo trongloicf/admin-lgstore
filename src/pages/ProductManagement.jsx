@@ -1,7 +1,7 @@
 import { HiPencil, HiTrash, HiEye, HiOutlineSearch } from "react-icons/hi";
 import '../assets/styles/Management.css'
 
-function GuestManagement() {
+function ProductManagement() {
     return (
         <div>
             <div style={{ display: "flex", alignItems: "center", marginBottom: "10px" }}>
@@ -11,23 +11,30 @@ function GuestManagement() {
                         <HiOutlineSearch />
                     </button>
                 </div>
+                <button className="btn-add">Thêm sản phẩm</button>
             </div>
             <table style={{ width: "100%", borderCollapse: 'collapse' }}>
                 <thead>
                     <tr style={{ background: "#22C55E", textAlign: "left" }}>
-                        <th style={{ padding: "10px", borderBottom: "1px solid #ddd", color: "#fff", fontSize: "13px", fontWeight: "400" }}>ID</th>
-                        <th style={{ padding: "10px", borderBottom: "1px solid #ddd", color: "#fff", fontSize: "13px", fontWeight: "400" }}>Tên</th>
-                        <th style={{ padding: "10px", borderBottom: "1px solid #ddd", color: "#fff", fontSize: "13px", fontWeight: "400" }}>Số điện thoại</th>
-                        <th style={{ padding: "10px", borderBottom: "1px solid #ddd", color: "#fff", fontSize: "13px", fontWeight: "400" }}>Địa chỉ</th>
-                        <th style={{ padding: "10px", borderBottom: "1px solid #ddd", color: "#fff", fontSize: "13px", fontWeight: "400" }}>Hành động</th>
+                        <th style={{ padding: "10px", borderBottom: "1px solid #ddd", color: "#fff", fontSize: "13px", fontWeight: "500" }}>ID</th>
+                        <th style={{ padding: "10px", borderBottom: "1px solid #ddd", color: "#fff", fontSize: "13px", fontWeight: "500" }}>Ảnh sản phẩm</th>
+                        <th style={{ padding: "10px", borderBottom: "1px solid #ddd", color: "#fff", fontSize: "13px", fontWeight: "500" }}>Tên sản phẩm</th>
+                        <th style={{ padding: "10px", borderBottom: "1px solid #ddd", color: "#fff", fontSize: "13px", fontWeight: "500" }}>Danh mục</th>
+                        <th style={{ padding: "10px", borderBottom: "1px solid #ddd", color: "#fff", fontSize: "13px", fontWeight: "500" }}>Giá</th>
+                        <th style={{ padding: "10px", borderBottom: "1px solid #ddd", color: "#fff", fontSize: "13px", fontWeight: "500" }}>Tồn kho</th>
+                        <th style={{ padding: "10px", borderBottom: "1px solid #ddd", color: "#fff", fontSize: "13px", fontWeight: "500" }}>Hành động</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr style={{ borderBottom: "1px solid #ddd" }}>
                         <td style={{ padding: "10px" }}>1</td>
-                        <td style={{ padding: "10px" }}>Nguyễn Văn A</td>
-                        <td style={{ padding: "10px" }}>0337337848</td>
-                        <td style={{ padding: "10px" }}>Đông Kết, Khoái Châu, Hưng Yên</td>
+                        <td style={{ padding: "10px" }}>
+                            <img style={{ width: "120px" }} src="https://sneakerdaily.vn/wp-content/uploads/2025/02/Ao-Adidas-Messi-Training-Jersey-White-IZ2996.jpg" alt=""></img>
+                        </td>
+                        <td style={{ padding: "10px" }}>Áo Adidas Messi Training Jersey ‘White’ IZ2996</td>
+                        <td style={{ padding: "10px" }}>Áo bóng đá</td>
+                        <td style={{ padding: "10px" }}>890.000</td>
+                        <td style={{ padding: "10px" }}>890</td>
                         <td style={{ padding: "10px" }}>
                             <div className="btn-actions">
                                 <div style={{ padding: "10px", background: "green", borderRadius: "50%", display: "flex", alignItems: "center" }}>
@@ -63,4 +70,4 @@ function GuestManagement() {
     );
 }
 
-export default GuestManagement;
+export default ProductManagement;
