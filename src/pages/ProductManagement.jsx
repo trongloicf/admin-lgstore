@@ -1,7 +1,12 @@
 import { HiPencil, HiTrash, HiEye, HiOutlineSearch } from "react-icons/hi";
 import '../assets/styles/Management.css'
+import { useState } from "react";
+import Modal from "../components/Modal";
 
 function ProductManagement() {
+    console.log("PM.jsx")
+    const [isOpen, setIsOpen] = useState(false)
+
     return (
         <div>
             <div style={{ display: "flex", alignItems: "center", marginBottom: "10px" }}>
@@ -11,7 +16,9 @@ function ProductManagement() {
                         <HiOutlineSearch />
                     </button>
                 </div>
-                <button className="btn-add">Thêm sản phẩm</button>
+                <button className="btn-add"
+                    onClick={() => setIsOpen(true)}
+                >Thêm sản phẩm</button>
             </div>
             <table style={{ width: "100%", borderCollapse: 'collapse' }}>
                 <thead>
@@ -66,6 +73,23 @@ function ProductManagement() {
                     </tr>
                 </tbody>
             </table>
+
+            {
+                isOpen &&
+                <Modal isOpen={isOpen} onClose={() => setIsOpen(false)}>
+                    <div className="modal-header">
+                        <h2>Thêm sản phẩm</h2>
+                    </div>
+                    <div className="modal-body">
+                        <label for="p-name" class="modal-label">
+                            Tên sản phẩm
+                        </label>
+                        <input id="p-name" class="modal-input" placeholder="Tên sản phẩm..."></input>
+                        <button id="modal-save">Lưu</button>
+
+                    </div>
+                </Modal>
+            }
         </div>
     );
 }
