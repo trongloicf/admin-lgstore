@@ -44,29 +44,16 @@ function ProductManagement() {
                         <td style={{ padding: "10px" }}>890</td>
                         <td style={{ padding: "10px" }}>
                             <div className="btn-actions">
-                                <div style={{ padding: "10px", background: "green", borderRadius: "50%", display: "flex", alignItems: "center" }}>
-                                    <HiPencil
-                                        style={{ cursor: "pointer", color: "#fff" }}
-                                        title="Sửa"
-                                        size={17}
-                                        onClick={() => alert("Sửa user 1")}
-                                    />
-                                </div>
-                                <div style={{ padding: "10px", background: "red", borderRadius: "50%", display: "flex", alignItems: "center" }}>
-                                    <HiTrash
-                                        style={{ cursor: "pointer", color: "#fff" }}
-                                        title="Xóa"
-                                        size={17}
-                                        onClick={() => alert("Xóa user 1")}
-                                    />
-                                </div>
-                                <div style={{ padding: "10px", background: "blue", borderRadius: "50%", display: "flex", alignItems: "center" }}>
-                                    <HiEye
-                                        style={{ cursor: "pointer", color: "#fff" }}
-                                        title="Chi tiết"
-                                        size={17}
-                                        onClick={() => alert("Xem chi tiết user 1")}
-                                    />
+                                <div className="btn-actions">
+                                    <div className="btn-action btn-edit">
+                                        <HiPencil size={17} title="Sửa" onClick={() => alert("Sửa user 1")} />
+                                    </div>
+                                    <div className="btn-action btn-delete">
+                                        <HiTrash size={17} title="Xóa" onClick={() => alert("Xóa user 1")} />
+                                    </div>
+                                    <div className="btn-action btn-view">
+                                        <HiEye size={17} title="Chi tiết" onClick={() => alert("Xem chi tiết user 1")} />
+                                    </div>
                                 </div>
                             </div>
                         </td>
@@ -81,12 +68,109 @@ function ProductManagement() {
                         <h2>Thêm sản phẩm</h2>
                     </div>
                     <div className="modal-body">
-                        <label for="p-name" class="modal-label">
+                        <label htmlFor="p-name" className="modal-label">
                             Tên sản phẩm
                         </label>
-                        <input id="p-name" class="modal-input" placeholder="Tên sản phẩm..."></input>
-                        <button id="modal-save">Lưu</button>
+                        <input id="p-name" className="modal-input" placeholder="Tên sản phẩm..."></input>
+                        <div className="wrap-cate-price">
+                            <div className="col-3">
+                                <label className="modal-label">Danh mục</label>
+                                <select className="modal-select" name="" id="">
+                                    <option value="" className="modal-option">-- Chọn danh mục --</option>
+                                    <option value="" className="modal-option">Áo bóng đá</option>
+                                    <option value="" className="modal-option">Giày</option>
+                                    <option value="" className="modal-option">Phụ kiện</option>
+                                </select>
+                            </div>
+                            <div className="col-3">
+                                <label className="modal-label">Khuyến mãi</label>
+                                <select className="modal-select" name="" id="">
+                                    <option value="" className="modal-option">-- Chọn khuyến mãi --</option>
+                                    <option value="" className="modal-option">FlashSale (-50%)</option>
+                                    <option value="" className="modal-option">Black Friday (-20%)</option>
+                                </select>
+                            </div>
+                            <div className="col-3">
+                                <label htmlFor="p-price" className="modal-label">Giá</label>
+                                <input id="p-price" className="modal-input" type="number" placeholder="Giá sản phẩm...(VD: 2000)"></input>
+                            </div>
+                        </div>
+                        <label htmlFor="p-desc" className="modal-label">
+                            Mô tả sản phẩm
+                        </label>
+                        <textarea className="text-desc" name="" id="p-desc" placeholder="Mô tả sản phẩm..."></textarea>
+                        <div className="wrap-size">
+                            <label className="modal-label">
+                                Kích thước + Số lượng
+                            </label>
+                            <button className="btn-add">Thêm kích thước</button>
+                            <table className="modal-table">
+                                <thead>
+                                    <tr>
+                                        <th>Kích thước</th>
+                                        <th>Số lượng</th>
+                                        <th>Hành động</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>S</td>
+                                        <td>36</td>
+                                        <td>
+                                            <div className="btn-actions">
+                                                <button className="btn-edit">
+                                                    Sửa
+                                                </button>
+                                                <button className="btn-delete">
+                                                    Xóa
+                                                </button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div >
+                            <label className="modal-label">Ảnh sản phẩm</label>
+                            <div className="upload-area">
+                                <button className="btn-add">
+                                    Thêm ảnh
+                                </button>
+                            </div>
 
+                            <div className="image-list">
+                                {/* Ảnh 1 */}
+                                <div className="image-item">
+                                    <img
+                                        src="https://sneakerdaily.vn/wp-content/uploads/2025/08/Ao-adidas-Manchester-United-25_26-Away-Authentic-Jersey-White-JI7424.jpg"
+                                        alt="preview"
+                                        className="thumb"
+                                    />
+                                    <button type="button" className="btn-remove">✖</button>
+                                    <div className="main-check">
+                                        <input type="radio" name="mainImage" />
+                                        <p>Ảnh chính</p> 
+                                    </div>
+                                </div>
+
+                                {/* Ảnh 2 */}
+                                <div className="image-item">
+                                    <img
+                                        src="https://sneakerdaily.vn/wp-content/uploads/2025/08/Ao-adidas-Manchester-United-25_26-Away-Authentic-Jersey-White-JI7424-2.jpg"
+                                        alt="preview"
+                                        className="thumb"
+                                    />
+                                    <button type="button" className="btn-remove">✖</button>
+                                    <div className="main-check">
+                                        <input type="radio" name="mainImage" />
+                                        <p>Ảnh chính</p> 
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+
+                        <button id="modal-save">Lưu</button>
                     </div>
                 </Modal>
             }

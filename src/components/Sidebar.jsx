@@ -1,7 +1,8 @@
 import Logo from "./Logo";
 import '../App.css';
 import '../assets/styles/Slidebar.css';
-import { HiViewGridAdd, HiOutlineUser, HiOutlineUserGroup, HiClipboardCheck, HiOutlineLogout } from "react-icons/hi";
+import { HiViewGridAdd, HiOutlineUser, HiOutlineUserGroup, HiClipboardCheck, HiOutlineLogout, HiCube, HiOutlinePhotograph,
+HiGift, HiOutlineCode, HiTag } from "react-icons/hi";
 
 const Sidebar = () => {
   return (
@@ -20,7 +21,14 @@ const Sidebar = () => {
           <HiOutlineUserGroup size={18}/>
           Khách hàng
         </li>
-        <li>Sản phẩm</li>
+        <li className="flex items-center gap-5">
+          <HiCube size={18}/>
+          Sản phẩm
+        </li>
+        <li className="flex items-center gap-5">
+          <HiGift size={18}/>
+          Khuyến mãi
+        </li>
         <li className="flex items-center gap-5">
           <HiClipboardCheck size={18}/>
           Đơn hàng

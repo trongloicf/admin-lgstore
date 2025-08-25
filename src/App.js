@@ -5,6 +5,7 @@ import UserManagement from "./pages/UserManagement";
 import GuestManagement from "./pages/GuestManagement";
 import OrderManagement from "./pages/OrderManagement";
 import ProductManagement from "./pages/ProductManagement";
+import DiscoutMangement from "./pages/DiscoutMangement";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path="/guest" element={<GuestManagement />}/>
           <Route path="/order" element={<OrderManagement />}/>
           <Route path="/product" element={<ProductManagement />}/>
+          <Route path="/discount" element={<DiscoutMangement />} />
           {/* <Route path="/users" element={<Users />} /> */}
           {/* <Route path="/orders" element={<Orders />} /> */}
         </Routes>
